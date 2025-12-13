@@ -1,12 +1,54 @@
-# React + Vite
+# KoowalAI ChatBot - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-based frontend for the KoowalAI ChatBot application.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI Framework
+- **Vite** - Build Tool & Dev Server
+- **React Router 7** - Client-side Routing
+- **TanStack Query** - Server State Management
+- **Clerk React** - Authentication
+- **Google Generative AI** - Gemini Integration
+- **React Markdown** - AI Response Rendering
+- **ImageKit React** - Image Upload
 
-## Expanding the ESLint configuration
+## Quick Start
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Environment Variables
+
+Create a `.env` file in the Frontend directory:
+
+```env
+VITE_API_ENDPOINT=http://localhost:5000
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_xxxxx
+VITE_GEMINI_KEY=AIzaSyxxxxx
+VITE_IK_ENDPOINT=https://ik.imagekit.io/your-id
+VITE_IK_PUBLIC_KEY=public_xxxxx
+```
+
+## Project Structure
+
+```
+src/
+├── Components/     # Reusable UI components
+├── Layouts/        # Page layout wrappers
+├── Lib/            # Utilities & configurations
+├── Routes/         # Page components
+├── App.jsx         # Route configuration
+└── main.jsx        # Entry point
+```
